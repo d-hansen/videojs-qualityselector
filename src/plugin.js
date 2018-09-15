@@ -22,9 +22,11 @@ class QualitySelector {
       let source = this.sources.find(ss => ss.format === quality.code);
 
       if (source) {
+        let curtime = this.player.currentTime();
         this.player.src({ src: source.src, type: source.type });
 
         this.player.on('loadedmetadata', () => {
+          this.player.currentTime(curtime);
           this.player.play();
 
           Array.from(this.containerDropdownElement.firstChild.childNodes).forEach(ele => {

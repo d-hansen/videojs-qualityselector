@@ -8,19 +8,20 @@
   }
 
   .vjs-quality-container {
-  	padding: 8px;
+    padding: 8px;
     position: relative;
 
-  	.vjs-brand-quality-link {
-  		color: #fff;
-  		text-decoration: none;
+    .vjs-brand-quality-link {
+      color: #fff;
+      text-decoration: none;
       cursor: pointer;
-  	}
+    }
 
-  	.vjs-quality-dropdown {
-	    position: absolute;
-	    bottom: 30px;
-	    background: rgba(0, 0, 0, 0.48);
+    .vjs-quality-dropdown {
+      position: absolute;
+      z-index: 10;
+      bottom: 30px;
+      background: rgba(0, 0, 0, 0.48);
 
       /** animation **/
       transition: opacity 0.5s linear;
@@ -41,7 +42,7 @@
       -o-transition: -o-transform 0.26s ease;
       -ms-transition: -ms-transform 0.26s ease;
       transition: transform 0.26s ease;
-  	}
+    }
 
     .vjs-quality-dropdown.show {
       opacity: 1;
